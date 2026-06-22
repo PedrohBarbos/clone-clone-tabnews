@@ -1,0 +1,24 @@
+{
+  "name": "clone-clone-tabnews",
+  "version": "1.0.0",
+  "description": "Cara é alguma coisa, espero que seja importante",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PedrohBarbos/clone-clone-tabnews.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PedrohBarbos/clone-clone-tabnews/issues"
+  },
+  "homepage": "https://github.com/PedrohBarbos/clone-clone-tabnews#readme",
+  "dependencies": {
+    "next": "^13.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
