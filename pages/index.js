@@ -12,6 +12,7 @@ function Home () {
                 }
                 h1 {
                     color: #333;
+                    font-size: 60px;
                 }
                 p {
                     color: red;
