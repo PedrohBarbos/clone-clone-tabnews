@@ -3,7 +3,7 @@ function Home () {
         <>
          <div>
                 <h1>Olá Mãe</h1>
-                <p>Te amo</p>
+                <p>Te amo ❤️</p>
             </div>
             <style jsx>{`
                 div {
@@ -14,8 +14,8 @@ function Home () {
                     color: #333;
                 }
                 p {
-                    color: #666;
-                    font-size: 20px; 
+                    color: red;
+                    font-size: 50px; 
                 }
             `}</style>
         </>
