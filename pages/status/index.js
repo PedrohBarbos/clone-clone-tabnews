@@ -50,11 +50,11 @@ function DatabaseStatus() {
         </div>
       </>
     );
-
-    return (
-      <>
-        <div>{databaseStatusInformation}</div>
-      </>
-    );
   }
+
+  return (
+    <>
+      <div>{databaseStatusInformation}</div>
+    </>
+  );
 }
