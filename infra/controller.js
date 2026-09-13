@@ -1,4 +1,9 @@
-import { InternalServerError, MethodNotAllowedError } from "@/infra/errors.js";
+import {
+  InternalServerError,
+  MethodNotAllowedError,
+  ValidationEmailError,
+  ValidationUsernameError,
+} from "@/infra/errors.js";
 
 function onNoMatchHandler(request, response) {
   const publicErrorObject = new MethodNotAllowedError();
@@ -6,6 +11,13 @@ function onNoMatchHandler(request, response) {
 }
 
 function onErrorHandler(error, request, response) {
+  if (
+    error instanceof ValidationEmailError ||
+    error instanceof ValidationUsernameError
+  ) {
+    return response.status(error.statusCode).json(error);
+  }
+
   const publicErrorObject = new InternalServerError({
     statusCode: error.statusCode,
     cause: error,
