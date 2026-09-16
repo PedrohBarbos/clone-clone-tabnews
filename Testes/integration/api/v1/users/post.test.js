@@ -7,7 +7,7 @@ beforeAll(async () => {
   await orchestrator.runPendingMigrations();
 });
 
-describe("POST /api/v1/", () => {
+describe("POST /api/v1/users", () => {
   describe("Anonymos user", () => {
     test("With unique and valid data", async () => {
       const responce = await fetch("http://localhost:3000/api/v1/users", {
@@ -75,7 +75,7 @@ describe("POST /api/v1/", () => {
         name: "ValidationEmailError",
         message: "O email já está sendo utilizado por outro usuário.",
         action: "Utilize outro email para realizar o cadastro.",
-        status_Code: 400,
+        statusCode: 400,
       });
     });
 
@@ -114,7 +114,7 @@ describe("POST /api/v1/", () => {
         name: "ValidationUsernameError",
         message: "O username já está sendo utilizado por outro usuário.",
         action: "Utilize outro username para realizar o cadastro.",
-        status_Code: 400,
+        statusCode: 400,
       });
     });
   });
