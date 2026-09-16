@@ -3,6 +3,7 @@ import {
   MethodNotAllowedError,
   ValidationEmailError,
   ValidationUsernameError,
+  NotFoundError,
 } from "@/infra/errors.js";
 
 function onNoMatchHandler(request, response) {
@@ -13,7 +14,8 @@ function onNoMatchHandler(request, response) {
 function onErrorHandler(error, request, response) {
   if (
     error instanceof ValidationEmailError ||
-    error instanceof ValidationUsernameError
+    error instanceof ValidationUsernameError ||
+    error instanceof NotFoundError
   ) {
     return response.status(error.statusCode).json(error);
   }
